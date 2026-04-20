@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolás Faúndez | Diseñador UX/UI</title>
+    <meta name="description" content="Portafolio de Nicolás Faúndez, Diseñador UX/UI & Arquitecto de la Información. Transformando sistemas complejos en experiencias fluidas.">
+    
+    <!-- Google Fonts: Syne para títulos, Inter para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Principales -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">NF</a>
+            <div class="nav-links">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="monogram">NF</h1>
+                <h2 class="name">Nicolás Faúndez</h2>
+                <p class="hero-copy">
+                    Diseñador UX/UI & Arquitecto de la Información. Transformo sistemas complejos en experiencias digitales fluidas, fusionando 7 años de comunicación audiovisual con metodologías ágiles y diseño centrado en el usuario.
+                </p>
+                <a href="#proyectos" class="cta-button">Ver Proyectos</a>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos (Grid Layout) -->
+        <section id="proyectos" class="projects">
+            <div class="container">
+                <h2 class="section-title">Casos de Estudio & Proyectos</h2>
+                <div class="projects-grid">
+                    
+                    <!-- Proyecto 1: Caso de Estudio Principal -->
+                    <article class="project-card main-project">
+                        <div class="card-content">
+                            <h3>Rediseño Plataforma Educativa IT</h3>
+                            <p class="description">Rediseño integral de arquitectura de información (AI) y UI.</p>
+                            
+                            <div class="project-details" style="margin-top: 1rem;">
+                                <p><strong>Benchmarking Competitivo:</strong> Análisis profundo de plataformas líderes: <em>Coursera</em> (jerarquía profunda y robusta), <em>Khan Academy</em> (rutas guiadas por audiencia) y <em>Platzi</em> (sistema de progreso continuo). Con estos hallazgos, se diseñó una <strong>Taxonomía Híbrida facetada</strong> que une la estructura autoritativa de Coursera con la fluidez y reducida carga cognitiva de Platzi.</p>
+                                <p><strong>Nueva Arquitectura:</strong> Reorganización del inventario de servicios y nomenclatura, estructurando filtros por Áreas de Estudio, Dificultad y Formatos:</p>
+                                
+                                <div class="table-container">
+                                    <table class="inventory-table">
+                                        <thead>
+                                            <tr>
+                                                <th>URL / Ubicación</th>
+                                                <th>Título Actual</th>
+                                                <th>Acción</th>
+                                                <th>Título Sugerido</th>
+                                                <th>Justificación</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="mono">/home</td>
+                                                <td>Inicio</td>
+                                                <td><span class="status-badge status-keep">Mantener</span></td>
+                                                <td><strong>Inicio</strong></td>
+                                                <td>Estándar de la industria.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mono">/cursos-generales</td>
+                                                <td>Cursos Generales</td>
+                                                <td><span class="status-badge status-modify">Modificar</span></td>
+                                                <td><strong>Explorar Catálogo</strong></td>
+                                                <td>"Generales" es ambiguo. "Explorar" invita a la acción.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mono">.../tecn</td>
+                                                <td>Área de Sistemas</td>
+                                                <td><span class="status-badge status-modify">Modificar</span></td>
+                                                <td><strong>Tecnología y Desarrollo</strong></td>
+                                                <td>Más actual, alineado con industria.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mono">.../art</td>
+                                                <td>Cosas Visuales</td>
+                                                <td><span class="status-badge status-delete">Eliminar/Unir</span></td>
+                                                <td><strong>Diseño y UX/UI</strong></td>
+                                                <td>El término original carecía de profesionalismo.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mono">/mi-perfil/clases</td>
+                                                <td>Mis cosas</td>
+                                                <td><span class="status-badge status-modify">Modificar</span></td>
+                                                <td><strong>Mi Ruta de Aprendizaje</strong></td>
+                                                <td>Enfocado en el progreso, no un simple listado.</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="mono">/ayuda</td>
+                                                <td>FAQs</td>
+                                                <td><span class="status-badge status-keep">Mantener</span></td>
+                                                <td><strong>Centro de Ayuda</strong></td>
+                                                <td>Término universal e intuitivo.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <p><strong>Evaluación Heurística & Soluciones Aplicadas:</strong></p>
+                                <ul class="heuristic-list" style="margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-muted); font-size: 1rem;">
+                                    <li><strong>Prevención de errores:</strong> Inclusión de buscadores con texto predictivo para evitar pantallas con "0 resultados".</li>
+                                    <li><strong>Diseño Estético:</strong> Reducción drástica del ruido visual eliminando banners gigantes y adoptando el patrón F.</li>
+                                    <li><strong>Visibilidad del estado:</strong> Barras de progreso implementadas directamente en el <em>Hero</em> para retomar la clase en 1 clic.</li>
+                                </ul>
+
+                                <p><strong>Grilla de Construcción (Wireframes):</strong> Sistema fluido de 12 columnas para Desktop (menú + contenido) y 4 columnas (100% width) para entorno Móvil.</p>
+                                
+                                <div class="wireframe-gallery">
+                                    <figure>
+                                        <img src="WIREFRAMS/wireframe-desktop.png" alt="Wireframe Desktop Plataforma Educativa" class="wireframe-img">
+                                        <figcaption>Estructura Desktop - Patrón F</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="WIREFRAMS/wireframe-mobile.png" alt="Wireframe App Móvil Plataforma Educativa" class="wireframe-img">
+                                        <figcaption>Estructura Móvil - Navegación Inferior</figcaption>
+                                    </figure>
+                                </div>
+
+                                <p class="hitos" style="margin-top: 1.5rem;"><strong>Validación y Usabilidad:</strong> Prueba moderada con 5 usuarios. El éxito al utilizar la función <em>"Continuar aprendiendo"</em> fue del <strong>100%</strong> (1 clic en Desktop), con una facilidad percibida de 4.8 sobre 5.0.</p>
+
+                                <p style="margin-top: 2rem;"><strong>Sistema de Diseño y Prototipo de Alta Fidelidad (UI):</strong></p>
+                                <ul class="heuristic-list" style="margin-bottom: 1rem; padding-left: 1.5rem; color: var(--text-muted); font-size: 1rem;">
+                                    <li><strong>Código Visual Estricto:</strong> El color de acento principal se reservó exclusivamente para botones de "Llamado a la Acción" (Call to Actions) como <em>"Retomar clase"</em>, para guiar la atención instintivamente.</li>
+                                    <li><strong>Consistencia y Estándares:</strong> Uso de íconos universales, reemplazando botones dispares por una estructura cohesiva (desaparecieron los botones cuadrados azules mezclados con circulares verdes).</li>
+                                    <li><strong>Estados del Sistema:</strong> Diseño de estados inactivos (disabled) en tono gris para cursos que requieren nivel previo, mitigando frustraciones antes de la interacción.</li>
+                                </ul>
+
+                                <div class="prototype-gallery" style="margin-top: 1.5rem;">
+                                    <img src="PROTOTIPO/prototype-1.png" alt="UI Prototipo 1" loading="lazy">
+                                    <img src="PROTOTIPO/prototype-2.png" alt="UI Prototipo 2" loading="lazy">
+                                    <img src="PROTOTIPO/prototype-3.png" alt="UI Prototipo 3" loading="lazy">
+                                    <img src="PROTOTIPO/prototype-4.png" alt="UI Prototipo 4" loading="lazy">
+                                    <img src="PROTOTIPO/prototype-5.png" alt="UI Prototipo 5" loading="lazy">
+                                    <img src="PROTOTIPO/prototype-6.png" alt="UI Prototipo 6" loading="lazy">
+                                </div>
+                            </div>
+
+                            <div class="tags">
+                                <span>UX Research</span>
+                                <span>Benchmarking</span>
+                                <span>Taxonomía Híbrida</span>
+                                <span>Card Sorting</span>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Proyecto 2 -->
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3>Hermosos Ruidos</h3>
+                            <p class="description">Plataforma digital, archivo y revista para la escena techno chilena underground.</p>
+                            <p style="font-size: 0.95rem; margin-top: 0.5rem; color: var(--text-muted);">
+                                <strong>Desafío Técnico:</strong> Desarrollo frontend con Next.js/React implementando un diseño de <em>Estética Brutalista</em>. El núcleo del proyecto es un reproductor de audio global (`AudioPlayerContext`) impulsado por SoundCloud que permite la reproducción ininterrumpida mientras se navega entre las páginas (carouseles móviles interactivos y directorios). Integración fluida con <strong>Sanity CMS</strong> para gestión de contenido dinámico.
+                            </p>
+
+                            <div class="presskit-gallery" style="margin-top: 1.5rem;">
+                                <div class="mockup-window mockup-featured">
+                                    <img src="PRESSKIT/p2-home.png" alt="Hermosos Ruidos Inicio" loading="lazy">
+                                    <div class="mockup-title">Inicio (Hero & Player)</div>
+                                </div>
+                                <div class="mockup-window">
+                                    <img src="PRESSKIT/p2-musica.png" alt="Hermosos Ruidos Directorio" loading="lazy">
+                                    <div class="mockup-title">Directorio Musical</div>
+                                </div>
+                                <div class="mockup-window">
+                                    <img src="PRESSKIT/p2-clubes.png" alt="Hermosos Ruidos Clubes" loading="lazy">
+                                    <div class="mockup-title">Clubes y Colectivos</div>
+                                </div>
+                            </div>
+
+                            <div class="tags">
+                                <span>Frontend (React)</span>
+                                <span>Sanity CMS</span>
+                                <span>Audio Context API</span>
+                                <span>UI Brutalista</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3>Conceptual Parties</h3>
+                            <p class="description">Productora de experiencias y eventos conceptuales enfocada en la cultura de club y electrónica.</p>
+                            
+                            <p style="font-size: 0.95rem; margin-top: 0.5rem; color: var(--text-muted);">
+                                <strong>Identidad Visual y Dirección de Arte:</strong> Creación de marca para productora de eventos. El diseño de identidad busca transmitir el minimalismo y el dinamismo lumínico y gráfico propios de la pista de baile underground y la cultura techno.
+                            </p>
+
+                            <div class="brand-gallery" style="margin-top: 1.5rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: center;">
+                                <img src="CONCEPTUAL_PARTIES/logo-9.png" alt="Logo Conceptual Parties" style="width: 100%; border-radius: 8px; border: 1px solid rgba(26,26,26,0.05); background: #1a1a1a;">
+                                <img src="CONCEPTUAL_PARTIES/conceptual-1.png" alt="Branding Poster 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(26,26,26,0.08);">
+                                <img src="CONCEPTUAL_PARTIES/conceptual-2.png" alt="Branding Poster 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(26,26,26,0.08);">
+                                <img src="CONCEPTUAL_PARTIES/conceptual-3.png" alt="Branding Poster 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(26,26,26,0.08);">
+                            </div>
+
+                            <div class="tags" style="margin-top: 1.5rem;">
+                                <span>Experience Design</span>
+                                <span>Branding</span>
+                                <span>Dirección de Arte</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4 -->
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3>Ecosistemas Broadcast</h3>
+                            <p class="description">Diseño de interfaces dinámicas y marcadores en tiempo real para transmisiones en vivo (OBS, NDI).</p>
+                            <div class="tags">
+                                <span>Broadcast Design</span>
+                                <span>Soluciones en Tiempo Real</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí & Contacto -->
+        <section id="sobre-mi" class="about">
+            <div class="container about-grid">
+                
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p>
+                        Como profesional con raíces en el mundo de la comunicación audiovisual (7 años de experiencia), he desarrollado un enfoque único hacia la creación de productos digitales. Mi experiencia dirigiendo transmisiones y proyectos técnicos me ha otorgado una capacidad resolutiva excepcional y una profunda comprensión del trabajo en equipo.
+                    </p>
+                    <p>
+                        Hoy en día, aplico esta perspectiva estructurada al diseño de interfaces y experiencias de usuario usando herramientas como Figma, metodologías de investigación, y protocolos ágiles para resolver problemas complejos de interacción y traducirlos en soluciones técnicas impecables.
+                    </p>
+                </div>
+
+                <div id="contacto" class="contact-links">
+                    <h3 class="contact-title">Contacto</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://linkedin.com/in/nicolasfaundez" target="_blank" class="cta-secondary">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="mailto:nicofaundez.f@gmail.com" class="cta-secondary">nicofaundez.f@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/56951636025" target="_blank" class="cta-secondary">WhatsApp (+56 9 5163 6025)</a>
+                        </li>
+                        <li>
+                            <a href="CV_Nicolas_Faundez.pdf" download class="cta-secondary">Descargar CV</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; <span id="year"></span> Nicolás Faúndez. Todos los derechos reservados.</p>
+            <p class="footer-note">Diseñado con rigor y minimalismo.</p>
+        </div>
+    </footer>
+
+    <!-- Script Principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>

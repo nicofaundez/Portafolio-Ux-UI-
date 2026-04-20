@@ -509,6 +509,32 @@ a {
     transform: translateY(-4px);
 }
 
+/* Video Gallery (Broadcast) */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(26,26,26,0.06);
+    background: #1a1a1a;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* ABOUT & CONTACT SECTION */
 .about {
     padding: var(--spacing-xl) 0;
@@ -609,7 +635,8 @@ footer {
     .about-grid,
     .prototype-gallery,
     .presskit-gallery,
-    .brand-posters {
+    .brand-posters,
+    .video-gallery {
         grid-template-columns: 1fr; /* 1 columna centralizada en móvil */
     }
     

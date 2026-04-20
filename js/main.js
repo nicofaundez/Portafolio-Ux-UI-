@@ -1,3 +1,16 @@
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Añadir una pequeña pausa de 500ms extra para asegurar que las fuentes/imágenes se asienten
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800); // 800ms cuadra con el fade-out en CSS
+        }, 500); 
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Actualizar el año en el footer automáticamente
     const yearSpan = document.getElementById('year');

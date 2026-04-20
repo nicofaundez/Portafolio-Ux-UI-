@@ -36,7 +36,12 @@
                 <p class="hero-copy">
                     Diseñador UX/UI & Arquitecto de la Información. Transformo sistemas complejos en experiencias digitales fluidas, fusionando 7 años de comunicación audiovisual con metodologías ágiles y diseño centrado en el usuario.
                 </p>
-                <a href="#proyectos" class="cta-button">Ver Proyectos</a>
+                <div class="hero-actions" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#proyectos" class="cta-button">Ver Proyectos</a>
+                    <a href="#audiovisual" class="card-action" style="display: flex; align-items: center; justify-content: center; padding: 0 1.5rem; background: #fffcf8; border: 1px solid rgba(26,26,26,0.1); border-radius: 8px; color: var(--text-color); text-decoration: none; font-weight: 600; box-shadow: 0 4px 15px rgba(26,26,26,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(26,26,26,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(26,26,26,0.05)';">
+                        🎥 Reel Audiovisual
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -226,7 +231,7 @@
                     </article>
 
                     <!-- Proyecto 4 -->
-                    <article class="project-card">
+                    <article id="audiovisual" class="project-card">
                         <div class="card-content">
                             <h3>Ecosistemas Broadcast</h3>
                             <p class="description">Diseño de interfaces dinámicas y marcadores en tiempo real para transmisiones en vivo (OBS, NDI).</p>

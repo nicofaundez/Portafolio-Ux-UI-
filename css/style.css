@@ -781,58 +781,224 @@ footer {
     cursor: zoom-in;
 }
 
-/* RESPONSIVE (Móvil: 4 Columnas equivalentes) */
+/* =============================================
+   RESPONSIVE — REESCRITURA COMPLETA PARA MÓVIL
+=============================================== */
+
+/* Tablets y abajo */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .project-card,
+    .project-card.main-project,
+    .project-card:nth-child(2),
+    .project-card:nth-child(3),
+    .project-card:nth-child(4),
+    .audiovisual-banner {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+    }
+}
+
+/* Móvil */
 @media (max-width: 768px) {
     :root {
-        --grid-gap: 16px;
-        --spacing-md: 1.5rem;
-        --spacing-lg: 3rem;
-        --spacing-xl: 5rem;
+        --grid-gap: 12px;
+        --spacing-xs: 0.4rem;
+        --spacing-sm: 0.8rem;
+        --spacing-md: 1.2rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 4rem;
     }
 
+    /* Nav: ocultar links, solo logo visible */
     .navbar {
         background: var(--bg-primary);
-    }
-    
-    .nav-links {
-        display: none; 
+        padding: 1rem 0;
     }
 
-    .projects-grid,
-    .about-grid,
+    .nav-links {
+        display: none;
+    }
+
+    /* Container: padding más pequeño para ganar espacio */
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Hero: texto y monograma ajustados al ancho */
+    .hero {
+        padding-top: 80px;
+        min-height: auto;
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0;
+        padding-top: var(--spacing-md);
+    }
+
+    .monogram {
+        font-size: clamp(4rem, 22vw, 8rem);
+    }
+
+    .name {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
+
+    .hero-copy {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch !important;
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Sección Proyectos */
+    .projects {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    /* Grid de Proyectos: forzar 1 columna */
+    .projects-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-md);
+    }
+
+    .project-card,
+    .project-card.main-project,
+    .project-card:nth-child(n),
+    .audiovisual-banner {
+        grid-column: unset !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card .description {
+        font-size: 1rem;
+    }
+
+    /* Imágenes: siempre al 100% del contenedor */
+    .mockup-window img,
+    .prototype-gallery img,
+    .wireframe-gallery img,
+    .brand-posters img,
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Galerías: forzar columna única */
     .prototype-gallery,
     .presskit-gallery,
     .brand-posters,
     .video-gallery {
-        grid-template-columns: 1fr; /* 1 columna centralizada en móvil */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-sm);
     }
-    
-    .project-card,
-    .audiovisual-banner {
-        grid-column: 1 / -1 !important; /* Fuerza a todos los proyectos y banners a 1 columna */
+
+    .mockup-window img {
+        height: 40vh;
+        object-fit: cover;
+    }
+
+    .mockup-featured img {
+        height: 40vh;
+    }
+
+    /* Tabla de investigación: scroll horizontal en lugar de overflow */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* About y contacto */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-md);
     }
 
     .about-text,
     .contact-links {
-        grid-column: 1 / -1;
+        width: 100%;
+        grid-column: unset !important;
     }
 
     .contact-links {
-        margin-top: var(--spacing-lg);
+        margin-top: var(--spacing-md);
     }
 
+    /* Footer */
     .footer-content {
         flex-direction: column;
-        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
     }
-    
-    .hero-content {
-        padding-top: var(--spacing-lg);
+
+    /* Herramientas / Tags */
+    .tags {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    /* Videos */
+    .video-container {
+        width: 100%;
+    }
+
+    /* Banner audiovisual */
+    .audiovisual-banner .banner-content {
+        padding: 1.2rem;
+    }
+
+    .audiovisual-banner .banner-content h3 {
+        font-size: 1.1rem;
     }
 }
 
-/* Fix definitivo de overflow para dispositivos móviles pequeños */
+/* Móviles muy pequeños (iPhone SE, etc.) */
+@media (max-width: 390px) {
+    .monogram {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Fix definitivo de overflow para dispositivos móviles */
 html, body {
     overflow-x: hidden;
-    width: 100%;
+    max-width: 100%;
 }
+

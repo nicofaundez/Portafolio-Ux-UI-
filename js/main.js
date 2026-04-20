@@ -31,4 +31,53 @@ document.addEventListener('DOMContentLoaded', () => {
         
         observer.observe(card);
     });
+
+    // Lógica para el Lightbox (Modal de Imágenes a Pantalla Completa)
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("img01");
+    const spanClose = document.getElementsByClassName("modal-close")[0];
+    
+    if (modal && modalImg && spanClose) {
+        // Seleccionar todas las imágenes dentro de las galerías
+        const galleryImages = document.querySelectorAll('.mockup-window img, .prototype-gallery img, .wireframe-gallery img, .brand-posters img');
+        
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                // Pequeño timeout para que se aplique la clase con transición
+                setTimeout(() => {
+                    modal.classList.add("show");
+                }, 10);
+            });
+        });
+
+        // Cerrar modal al hacer click en la X
+        spanClose.onclick = function() {
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Esperar que termine la transición css
+        }
+
+        // Cerrar modal al hacer click fuera de la imagen
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.classList.remove("show");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
+        }
+        
+        // Cerrar modal al presionar la tecla Esc
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && modal.style.display === "block") {
+                modal.classList.remove("show");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
+        });
+    }
 });

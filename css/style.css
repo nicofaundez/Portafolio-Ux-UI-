@@ -801,11 +801,8 @@ footer {
     }
     
     .project-card,
-    .project-card.main-project,
-    .project-card:nth-child(2),
-    .project-card:nth-child(3),
-    .project-card:nth-child(4) {
-        grid-column: 1 / -1;
+    .audiovisual-banner {
+        grid-column: 1 / -1 !important; /* Fuerza a todos los proyectos y banners a 1 columna */
     }
 
     .about-text,
@@ -825,4 +822,10 @@ footer {
     .hero-content {
         padding-top: var(--spacing-lg);
     }
+}
+
+/* Fix definitivo de overflow para dispositivos móviles pequeños */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }

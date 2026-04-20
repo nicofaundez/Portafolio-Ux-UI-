@@ -267,6 +267,40 @@ a {
     font-weight: 800;
 }
 
+/* BÚSQUEDA AUDIOVISUAL RÁPIDA (Salto Directo) */
+.audiovisual-banner {
+    display: block;
+    text-decoration: none;
+    margin-bottom: var(--spacing-md);
+    border-radius: 12px;
+    background: #1a1a1a;
+    border: 1px solid var(--accent);
+    color: #fffcf8;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.audiovisual-banner .banner-content {
+    padding: var(--spacing-md);
+    background: transparent;
+}
+
+.audiovisual-banner .banner-content h3 {
+    margin-bottom: 0.5rem;
+    color: #fffcf8;
+}
+
+.audiovisual-banner .banner-content p {
+    color: rgba(255, 252, 248, 0.8);
+    margin-bottom: 0;
+}
+
+.audiovisual-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(249, 161, 29, 0.2);
+    background: #2a2a2a; /* Mantiene la estética oscura pero reacciona al hover suavemente */
+}
+
 /* PROJECTS SECTION (Grid, Patrón F Escritorio) */
 .projects {
     padding: var(--spacing-xl) 0;

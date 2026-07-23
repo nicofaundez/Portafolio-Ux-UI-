@@ -739,6 +739,23 @@ a {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
+.mezclando-technical {
+    max-width: 720px;
+    margin: var(--spacing-md) auto 0 auto;
+    color: rgba(255, 252, 248, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    border-top: 1px solid rgba(255, 252, 248, 0.1);
+    padding-top: var(--spacing-md);
+    font-style: italic;
+}
+
+.mezclando-technical strong {
+    color: var(--accent);
+    font-style: normal;
+}
+
 /* FOOTER */
 footer {
     padding: var(--spacing-md) 0;

@@ -693,6 +693,52 @@ a {
     color: var(--accent);
 }
 
+/* =========================================
+   MEZCLANDO DOS MUNDOS
+========================================= */
+.mezclando-section {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: #1a1a1a;
+    border-radius: 16px;
+    color: #fffcf8;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea de acento superior */
+.mezclando-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.mezclando-title {
+    color: #fffcf8 !important;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mezclando-desc {
+    color: rgba(255, 252, 248, 0.75);
+    font-size: 1.1rem;
+    max-width: 720px;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.mezclando-video {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
 /* FOOTER */
 footer {
     padding: var(--spacing-md) 0;

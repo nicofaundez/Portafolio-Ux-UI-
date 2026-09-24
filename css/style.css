@@ -12,7 +12,7 @@
     
     /* Layout */
     --container-width: 1200px;
-    --grid-gap: 24px;
+    --grid-gap: 20px;
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -121,6 +121,7 @@ p, a, span, li {
 
 p {
     margin-bottom: var(--spacing-sm);
+    text-align: justify;
 }
 
 a {
@@ -347,7 +348,8 @@ a {
 
 .audiovisual-banner .banner-content {
     padding: var(--spacing-md);
-    background: transparent;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(26,26,26,0.03);
 }
 
 .audiovisual-banner .banner-content h3 {
@@ -380,14 +382,15 @@ a {
 /* Configuración de las tarjetas */
 .project-card {
     grid-column: span 6; /* 2 columnas por defecto */
-    padding: var(--spacing-md) 0 var(--spacing-md) 0; /* Uso de negative space en vez de bordes duros */
+    padding: 0; /* Sin espacio negativo para que se vea mas como una grilla homogenea */
     transition: transform 0.4s ease, opacity 0.4s ease;
     display: flex;
     flex-direction: column;
 }
 
 .project-card .card-content {
-    background: transparent;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(26,26,26,0.03);
     padding: var(--spacing-md);
     border-radius: 12px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -406,18 +409,6 @@ a {
 /* Layout específico F-Pattern */
 .project-card.main-project {
     grid-column: span 12;
-}
-
-.project-card:nth-child(2) {
-    grid-column: span 6;
-}
-
-.project-card:nth-child(3) {
-    grid-column: span 6;
-}
-
-.project-card:nth-child(4) {
-    grid-column: 3 / span 8; /* Centro para balancear la asimetría */
 }
 
 /* Tipografía de las tarjetas */
@@ -788,6 +779,7 @@ a {
     max-width: 720px;
     line-height: 1.8;
     margin-bottom: var(--spacing-lg);
+    text-align: justify;
 }
 
 .mezclando-video {
@@ -915,10 +907,7 @@ footer {
 
     .project-card,
     .project-card.main-project,
-    .project-card:nth-child(2),
-    .project-card:nth-child(3),
-    .project-card:nth-child(4),
-    .audiovisual-banner {
+        .audiovisual-banner {
         grid-column: 1 / -1 !important;
         width: 100% !important;
     }
@@ -1166,4 +1155,9 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+
+h1, h2, h3, h4 {
+    text-align: left;
 }
